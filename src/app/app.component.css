@@ -1,0 +1,9 @@
+.menu__link {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu__link_active {
+  color: green;
+}
