@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBase } from '../../base/form/form-base.component';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent extends FormBase {
+  /** Форма */
+  public form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private fb: FormBuilder) {
+    super();
   }
 
+  /** Инициализация формы */
+  protected initForm(): void {
+    this.form = this.fb.group({
+      name: [null, [Validators.required]],
+      password: [null, [Validators.required]],
+      region: [null, [Validators.required]],
+      acceptLicense: [false, [Validators.requiredTrue]]
+    });
+  }
 }

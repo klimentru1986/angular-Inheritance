@@ -1,3 +1,25 @@
-<p>
-  sign-up works!
-</p>
+<form [formGroup]="form">
+  <app-input [control]="form.get('name')"
+    label="Имя:"
+    placeholder="введите имя"
+    controlId="name"></app-input>
+
+  <app-input [control]="form.get('password')"
+    label="Пароль:"
+    placeholder="введите пароль"
+    type="password"
+    controlId="password"></app-input>
+
+  <app-select [control]="form.get('region')"
+    label="Регион:"
+    placeholder="введите регион"
+    type="region"
+    controlId="region"></app-select>
+
+  <app-checkbox [control]="form.get('acceptLicense')"
+    label="я принимаю лицензионное соглашение"
+    type="acceptLicense"
+    controlId="acceptLicense"></app-checkbox>
+</form>
+<hr/>
+<div>{{form.value | json}}</div>
