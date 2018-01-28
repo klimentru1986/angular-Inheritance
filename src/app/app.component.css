@@ -2,6 +2,7 @@
   padding: 5px 10px;
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
 }
 
 .menu__link_active {

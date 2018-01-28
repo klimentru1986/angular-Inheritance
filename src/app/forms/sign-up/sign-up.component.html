@@ -1,4 +1,5 @@
-<form [formGroup]="form">
+<form [formGroup]="form"
+  class="form">
   <app-input [control]="form.get('name')"
     label="Имя:"
     placeholder="введите имя"
@@ -20,6 +21,11 @@
     label="я принимаю лицензионное соглашение"
     type="acceptLicense"
     controlId="acceptLicense"></app-checkbox>
+
+  <div class="button-container">
+    <button class="button">Регистрация</button>
+  </div>
+
 </form>
 <hr/>
 <div>{{form.value | json}}</div>

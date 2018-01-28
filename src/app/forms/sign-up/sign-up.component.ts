@@ -5,7 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['../../base/form/form-base.component.css', './sign-up.component.css']
 })
 export class SignUpComponent extends FormBase {
   /** Форма */

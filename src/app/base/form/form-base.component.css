@@ -1,0 +1,18 @@
+.form {
+  box-sizing: border-box;
+  width: 30vw;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.button-container {
+  display: flex;
+  padding: 10px;
+}
+
+.button {
+  flex: 1;
+  padding: 10px;
+  text-transform: uppercase;
+}
