@@ -1,0 +1,25 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+}
+
+.form-group_inline {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 14px;
+  color: darkolivegreen;
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+.form-control {
+  border: 1px solid darkolivegreen;
+  background: white;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}

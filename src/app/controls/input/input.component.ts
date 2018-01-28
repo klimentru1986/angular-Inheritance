@@ -4,7 +4,7 @@ import { ControlBase } from '../../base/control/control-base.component';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css', '../../base/control/control-base.component.css']
+  styleUrls: ['../../base/control/control-base.component.css', './input.component.css']
 })
 export class InputComponent extends ControlBase {
   @Input() type: string;

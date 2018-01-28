@@ -4,7 +4,7 @@ import { ControlBase } from '../../base/control/control-base.component';
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.css', '../../base/control/control-base.component.css']
+  styleUrls: ['../../base/control/control-base.component.css', './checkbox.component.css']
 })
 export class CheckboxComponent extends ControlBase {
   constructor() {

@@ -1,9 +1,9 @@
 <div class="form-group">
-  <div class="form-label"
-    for="controlId">{{label}}</div>
+  <label class="form-label"
+    [for]="controlId">{{label}}</label>
   <input [formControl]="control"
     [type]="type"
     [placeholder]="placeholder"
-    [id]="controlId" 
-    class="form-control"/>
+    [id]="controlId"
+    class="form-control" />
 </div>
