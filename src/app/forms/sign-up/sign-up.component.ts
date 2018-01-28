@@ -20,7 +20,7 @@ export class SignUpComponent extends FormBase implements OnInit {
   ngOnInit() {
     super.ngOnInit();
 
-    this.regionsList = ['Белорусия', 'Казахстан', 'Россия', 'Украина'];
+    this.regionsList = ['Белоруссия', 'Казахстан', 'Россия', 'Украина'];
   }
 
   /** Submit формы */
