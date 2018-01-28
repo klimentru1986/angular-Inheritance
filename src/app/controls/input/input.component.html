@@ -6,4 +6,6 @@
     [placeholder]="placeholder"
     [id]="controlId"
     class="form-control" />
+  <div class="error"
+    *ngIf="isControlInvalidAndTouched()">Неверное значение</div>
 </div>

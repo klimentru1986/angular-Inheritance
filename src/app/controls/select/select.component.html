@@ -7,4 +7,6 @@
   <option *ngIf="placeholder" selected disabled>{{placeholder}}</option>
   <option *ngFor="let option of options">{{option}}</option>
   </select>
+  <div class="error"
+    *ngIf="isControlInvalidAndTouched()">Неверное значение</div>
 </div>

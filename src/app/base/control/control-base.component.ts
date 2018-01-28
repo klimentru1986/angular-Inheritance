@@ -17,4 +17,11 @@ export abstract class ControlBase {
     this.placeholder = '';
     this.controlId = `control__${Math.floor(Math.random() * 75)}`;
   }
+
+  /** Проверка контрола на валидность */
+  public isControlInvalidAndTouched(): boolean {
+    const result = this.control.invalid && this.control.touched;
+
+    return result;
+  }
 }

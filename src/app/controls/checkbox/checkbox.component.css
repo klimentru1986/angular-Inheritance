@@ -5,3 +5,7 @@
 .form-label {
   margin: 0;
 }
+
+.form-label-red {
+  color: red;
+}
