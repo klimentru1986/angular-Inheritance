@@ -1,5 +1,6 @@
 <form [formGroup]="form"
-  class="form">
+  class="form"
+  (ngSubmit)="onSubmit()">
   <app-input [control]="form.get('name')"
     label="Имя:"
     placeholder="введите имя"
@@ -12,7 +13,8 @@
     controlId="password"></app-input>
 
   <div class="button-container">
-    <button class="button">Вход</button>
+    <button class="button"
+      type="submit">Вход</button>
   </div>
 </form>
 <hr/>

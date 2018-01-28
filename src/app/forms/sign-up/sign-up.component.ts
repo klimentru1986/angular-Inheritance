@@ -15,6 +15,11 @@ export class SignUpComponent extends FormBase {
     super();
   }
 
+  /** Submit формы */
+  public onSubmit() {
+    this.markAllControlsAsTouched();
+  }
+
   /** Инициализация формы */
   protected initForm(): void {
     this.form = this.fb.group({

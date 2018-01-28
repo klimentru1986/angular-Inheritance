@@ -23,3 +23,7 @@
   padding: 5px 10px;
   box-sizing: border-box;
 }
+
+.form-control.ng-invalid.ng-touched {
+  border-color: red;
+}

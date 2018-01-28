@@ -14,6 +14,11 @@ export class SignInComponent extends FormBase {
     super();
   }
 
+  /** Submit формы */
+  public onSubmit() {
+    this.markAllControlsAsTouched();
+  }
+
   protected initForm(): void {
     this.form = this.fb.group({
       name: [null, [Validators.required]],
