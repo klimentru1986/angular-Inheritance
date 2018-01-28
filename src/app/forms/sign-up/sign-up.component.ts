@@ -7,12 +7,20 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './sign-up.component.html',
   styleUrls: ['../../base/form/form-base.component.css', './sign-up.component.css']
 })
-export class SignUpComponent extends FormBase {
+export class SignUpComponent extends FormBase implements OnInit {
   /** Форма */
   public form: FormGroup;
+  /** Список регионов для селекта */
+  public regionsList: string[];
 
   constructor(private fb: FormBuilder) {
     super();
+  }
+
+  ngOnInit() {
+    super.ngOnInit();
+
+    this.regionsList = ['Белорусия', 'Казахстан', 'Россия', 'Украина'];
   }
 
   /** Submit формы */

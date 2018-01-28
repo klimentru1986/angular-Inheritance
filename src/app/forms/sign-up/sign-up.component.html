@@ -13,6 +13,7 @@
     controlId="password"></app-input>
 
   <app-select [control]="form.get('region')"
+    [options]="regionsList"
     label="Регион:"
     placeholder="введите регион"
     type="region"
