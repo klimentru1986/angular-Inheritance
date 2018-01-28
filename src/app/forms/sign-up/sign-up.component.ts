@@ -25,7 +25,12 @@ export class SignUpComponent extends FormBase implements OnInit {
 
   /** Submit формы */
   public onSubmit() {
-    this.markAllControlsAsTouched();
+    if (this.form.invalid) {
+      this.markAllControlsAsTouched();
+      return;
+    }
+
+    console.log('form is valid');
   }
 
   /** Инициализация формы */

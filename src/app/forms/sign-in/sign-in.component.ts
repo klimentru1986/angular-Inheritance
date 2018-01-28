@@ -16,7 +16,12 @@ export class SignInComponent extends FormBase {
 
   /** Submit формы */
   public onSubmit() {
-    this.markAllControlsAsTouched();
+    if (this.form.invalid) {
+      this.markAllControlsAsTouched();
+      return;
+    }
+
+    console.log('form is valid');
   }
 
   protected initForm(): void {
