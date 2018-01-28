@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ControlBase } from '../../base/control/control-base.component';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css']
+  styleUrls: ['./input.component.css', '../../base/control/control-base.component.css']
 })
-export class InputComponent implements OnInit {
+export class InputComponent extends ControlBase {
+  @Input() type: string;
 
-  constructor() { }
+  constructor() {
+    super();
 
-  ngOnInit() {
+    this.type = 'text';
   }
-
 }

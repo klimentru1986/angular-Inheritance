@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ControlBase } from '../../base/control/control-base.component';
 
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.css']
+  styleUrls: ['./checkbox.component.css', '../../base/control/control-base.component.css']
 })
-export class CheckboxComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class CheckboxComponent extends ControlBase {
+  constructor() {
+    super();
   }
-
 }

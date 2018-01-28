@@ -1,3 +1,10 @@
-<p>
-  select works!
-</p>
+<div class="form-group">
+  <div class="form-label"
+    for="controlId">{{label}}</div>
+  <select [formControl]="control"
+    [id]="controlId"
+    class="form-control">
+  <option *ngIf="placeholder" selected disabled>{{placeholder}}</option>
+  <option *ngFor="let option of options">{{option}}</option>
+  </select>
+</div>

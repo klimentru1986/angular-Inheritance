@@ -9,6 +9,7 @@ import { SelectComponent } from './controls/select/select.component';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { SignInComponent } from './forms/sign-in/sign-in.component';
 import { CheckboxComponent } from './controls/checkbox/checkbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CheckboxComponent } from './controls/checkbox/checkbox.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
