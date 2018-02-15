@@ -1,0 +1,11 @@
+<a (click)="previousPage()"
+  [class.disabled]="!hasPrevious()">
+  << 
+</a>
+
+<span>{{ page }} / {{ pageCount }}</span>
+
+<a (click)="nextPage()"
+      [class.disabled]="!hasNext()">
+	>>
+</a>
