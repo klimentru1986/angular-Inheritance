@@ -9,6 +9,6 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>('http://5a2762ec84a17f0012a945b2.mockapi.io/persons');
+    return this.http.get<User[]>('https://5a2762ec84a17f0012a945b2.mockapi.io/persons');
   }
 }
