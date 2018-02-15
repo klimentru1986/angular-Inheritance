@@ -7,11 +7,9 @@ import { ControlBase } from '../../base/control/control-base.component';
   styleUrls: ['../../base/control/control-base.component.css', './input.component.css']
 })
 export class InputComponent extends ControlBase {
-  @Input() type: string;
+  @Input() type: string = 'text';
 
   constructor() {
     super();
-
-    this.type = 'text';
   }
 }

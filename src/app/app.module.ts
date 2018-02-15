@@ -4,29 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { InputComponent } from './controls/input/input.component';
-import { SelectComponent } from './controls/select/select.component';
-import { SignUpComponent } from './forms/sign-up/sign-up.component';
-import { SignInComponent } from './forms/sign-in/sign-in.component';
-import { CheckboxComponent } from './controls/checkbox/checkbox.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { Example2Module } from './example-2/example-2.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InputComponent,
-    SelectComponent,
-    SignUpComponent,
-    SignInComponent,
-    CheckboxComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, Example2Module],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
