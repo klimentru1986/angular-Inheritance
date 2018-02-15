@@ -9,6 +9,8 @@ import { CheckboxComponent } from './controls/checkbox/checkbox.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { FormHelperService } from './services/form-helper.service';
+
 @NgModule({
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
   declarations: [
@@ -18,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignInComponent,
     SignUpComponent,
     CheckboxComponent
-  ]
+  ],
+  providers: [FormHelperService]
 })
 export class Example2Module {}

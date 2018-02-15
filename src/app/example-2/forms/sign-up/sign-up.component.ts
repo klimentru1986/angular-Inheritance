@@ -1,25 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBase } from '../../base/form/form-base.component';
+import { Component } from '@angular/core';
+import { FormBase } from '../../base/form/form.base';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormHelperService } from '../../services/form-helper.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['../../base/form/form-base.component.css', './sign-up.component.css']
+  styleUrls: ['../../base/form/form.base.css', './sign-up.component.css']
 })
-export class SignUpComponent extends FormBase implements OnInit {
-  /** Форма */
-  public form: FormGroup;
+export class SignUpComponent extends FormBase {
   /** Список регионов для селекта */
   public regionsList: string[];
 
-  constructor(private fb: FormBuilder) {
-    super();
+  constructor(private fb: FormBuilder, formHelper: FormHelperService) {
+    super(formHelper);
   }
 
-  ngOnInit() {
-    super.ngOnInit();
-
+  protected initDefaultValues(): void {
     this.regionsList = ['Белоруссия', 'Казахстан', 'Россия', 'Украина'];
   }
 
@@ -34,8 +31,8 @@ export class SignUpComponent extends FormBase implements OnInit {
   }
 
   /** Инициализация формы */
-  protected initForm(): void {
-    this.form = this.fb.group({
+  protected initForm(): FormGroup {
+    return this.fb.group({
       name: [null, [Validators.required]],
       password: [null, [Validators.required]],
       region: [null, [Validators.required]],

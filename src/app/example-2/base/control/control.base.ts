@@ -8,15 +8,11 @@ export abstract class ControlBase {
   /** Id контрола */
   @Input() controlId: string;
   /** Плэйсхолдер */
-  @Input() placeholder: string;
+  @Input() placeholder: string = '';
   /** Лэйбл */
   @Input() label: string;
 
-  constructor() {
-    /** Значения по умолчанию */
-    this.placeholder = '';
-    this.controlId = `control__${Math.floor(Math.random() * 75)}`;
-  }
+  constructor() {}
 
   /** Проверка контрола на валидность */
   public isControlInvalidAndTouched(): boolean {
