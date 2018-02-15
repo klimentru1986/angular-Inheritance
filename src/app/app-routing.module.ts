@@ -8,7 +8,7 @@ import { Example1Component } from './example-1/example-1.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'example-2', pathMatch: 'full' },
-  { path: 'example-1', component: Example1Component }
+  { path: 'example-1', component: Example1Component },
   {
     path: 'example-2',
     component: Example2Component,
