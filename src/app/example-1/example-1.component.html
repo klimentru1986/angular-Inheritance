@@ -1,3 +1,11 @@
-<p>
-  example-1 works!
-</p>
+<div class="container">
+
+  <div>
+    <app-table [users]="users | async"></app-table>
+  </div>
+
+  <div>
+    <app-table-with-sort [users]="users | async"></app-table-with-sort>
+  </div>
+
+</div>
